@@ -8,7 +8,7 @@
             List<ProductReview> list = Managment.Reviews();
 
             Console.WriteLine("1.Create a Product Review List\n2.Top Three Records\n3.Rating Greater than Thre\n4.Count of Review\n5.Retrieve only Product ID" +
-                "\n5.Skip Top Five Records");
+                "\n6.Skip Top Five Records\n7.Retrieve Product ID With Rating");
             var option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -31,6 +31,9 @@
                     break;
                 case 6:
                     Managment.SkipTop5Records(list);
+                    break;
+                case 7:
+                    Managment.RetrieveProductIDWithRating(list);
                     break;
 
  
