@@ -7,6 +7,7 @@
             Console.WriteLine("Welcome To Product Review Management System");
             List<ProductReview> list = Managment.Reviews();
             Managment.DisplayeProductsReview(list);
+            Managment.TopThreeRecords(list);
             Console.ReadLine();
         }
     }

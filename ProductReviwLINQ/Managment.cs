@@ -37,6 +37,14 @@ namespace ProductReviwLINQ
                 Console.WriteLine(item);
             }
         }
+        public static void TopThreeRecords(List<ProductReview> list)
+        {
+            Console.WriteLine("Retrieve top 3 records from the list");
+            
+            var SortTopThreeProduct = from product in list orderby product.Rating descending select product;
+            var top3 = SortTopThreeProduct.Take(3).ToList();
+            DisplayeProductsReview(top3);
+        }
     }
 }
 
