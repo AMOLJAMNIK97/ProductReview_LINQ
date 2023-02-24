@@ -7,7 +7,8 @@
             Console.WriteLine("Welcome To Product Review Management System");
             List<ProductReview> list = Managment.Reviews();
 
-            Console.WriteLine("1.Create a Product Review List\n2.Top Three Records\n3.Rating Greater than Thre\n4.Count of Review\n5.Retrieve only Product ID");
+            Console.WriteLine("1.Create a Product Review List\n2.Top Three Records\n3.Rating Greater than Thre\n4.Count of Review\n5.Retrieve only Product ID" +
+                "\n5.Skip Top Five Records");
             var option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -27,6 +28,9 @@
                     break;
                 case 5:
                     Managment.RetrieveProductIDWithReview(list);
+                    break;
+                case 6:
+                    Managment.SkipTop5Records(list);
                     break;
 
  
